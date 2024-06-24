@@ -91,13 +91,14 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="48dp"
                 android:fontFamily="@font/yeonsung_regular"
                 android:text="Pending Order"
                 android:textColor="@color/TextColor"
                 android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@+id/imageView4"
-                tools:layout_editor_absoluteX="25dp" />
+                app:layout_constraintEnd_toStartOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
             <TextView
                 android:id="@+id/textView7"
@@ -128,15 +129,15 @@
                 android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginEnd="56dp"
                 android:fontFamily="@font/yeonsung_regular"
                 android:text="Completed\n Order"
-                android:layout_marginTop="8dp"
                 android:textAlignment="center"
                 android:textColor="@color/TextColor"
                 android:textSize="14sp"
-                app:layout_constraintStart_toEndOf="@+id/textView6"
-                tools:layout_editor_absoluteY="36dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="@+id/guideline"
                 tools:ignore="MissingConstraints">
 
             </TextView>
@@ -167,14 +168,13 @@
                 android:id="@+id/textView9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="20dp"
                 android:fontFamily="@font/yeonsung_regular"
-                android:layout_marginStart="14dp"
                 android:text="Whole Time\n Earning"
                 android:textAlignment="center"
                 android:textColor="@color/TextColor"
                 app:layout_constraintEnd_toStartOf="@+id/guideline3"
-                app:layout_constraintStart_toEndOf="@+id/textView8"
                 app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
             <TextView
@@ -201,10 +201,11 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView2"
-        app:layout_constraintTop_toTopOf="@+id/cardView2">
+        app:layout_constraintStart_toEndOf="@+id/addMenu"
+        app:layout_constraintTop_toTopOf="@+id/addMenu">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/allItemMenu"
             android:layout_width="match_parent"
             android:background="@drawable/greencard"
             android:layout_height="match_parent">
@@ -235,7 +236,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
+        android:id="@+id/addMenu"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
@@ -249,15 +250,15 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:background="@drawable/greencard"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/greencard">
 
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/pluse_round"
                 android:layout_marginTop="10dp"
+                android:src="@drawable/pluse_round"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -265,9 +266,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
                 android:fontFamily="@font/yeonsung_regular"
                 android:text="Add Menu"
-                android:layout_marginTop="28dp"
                 android:textColor="@color/TextColor"
                 app:layout_constraintEnd_toEndOf="@+id/imageView3"
                 app:layout_constraintStart_toStartOf="@+id/imageView3"
@@ -411,8 +412,8 @@
         android:elevation="4dp"
         android:outlineSpotShadowColor="@color/TextColor"
         app:cardCornerRadius="15dp"
-        app:layout_constraintStart_toStartOf="@+id/cardView2"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        app:layout_constraintStart_toStartOf="@+id/addMenu"
+        app:layout_constraintTop_toBottomOf="@+id/addMenu">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
