@@ -48,7 +48,7 @@
                 app:layout_constraintTop_toTopOf="@+id/backButton" />
 
             <EditText
-                android:id="@+id/enterFoodName"
+                android:id="@+id/FoodName"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
@@ -68,7 +68,7 @@
 
 
             <EditText
-                android:id="@+id/enterFoodPrice"
+                android:id="@+id/FoodPrice"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="24dp"
@@ -80,9 +80,9 @@
                 android:outlineSpotShadowColor="@color/TextColor"
                 android:paddingLeft="15dp"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/enterFoodName"
-                app:layout_constraintStart_toStartOf="@+id/enterFoodName"
-                app:layout_constraintTop_toBottomOf="@+id/enterFoodName" />
+                app:layout_constraintEnd_toEndOf="@+id/FoodName"
+                app:layout_constraintStart_toStartOf="@+id/FoodName"
+                app:layout_constraintTop_toBottomOf="@+id/FoodName" />
 
 
             <TextView
@@ -98,9 +98,9 @@
                 android:paddingRight="15dp"
                 android:text="Select Image"
                 android:textColor="@color/black"
-                app:layout_constraintEnd_toEndOf="@+id/enterFoodPrice"
-                app:layout_constraintStart_toStartOf="@+id/enterFoodPrice"
-                app:layout_constraintTop_toBottomOf="@+id/enterFoodPrice" />
+                app:layout_constraintEnd_toEndOf="@+id/FoodPrice"
+                app:layout_constraintStart_toStartOf="@+id/FoodPrice"
+                app:layout_constraintTop_toBottomOf="@+id/FoodPrice" />
 
 
             <androidx.cardview.widget.CardView
@@ -150,7 +150,7 @@
                 android:layout_marginTop="4dp"
                 android:background="@color/white"
                 android:fontFamily="@font/lato_regular"
-                android:text="A midlife crisis is often seen as a period of self-reflection, questioning, and emotional turmoil that can come in middle adulthood "
+                android:hint="Add description here"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/textView11"
                 app:layout_constraintHorizontal_bias="0.069"
@@ -169,7 +169,7 @@
                 android:fontFamily="@font/yeonsung_regular"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-                android:text="Short Description"
+                android:text="Ingredients"
                 android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="@+id/description"
                 app:layout_constraintStart_toStartOf="@+id/description"
@@ -179,13 +179,13 @@
 
 
             <EditText
-                android:id="@+id/ingradient"
+                android:id="@+id/ingredient"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@color/white"
                 android:fontFamily="@font/lato_regular"
-                android:text="You may start to regret your career path and feel trapped by your missed out on."
+                android:hint="Add Ingredients here"
                 app:layout_constraintEnd_toEndOf="@+id/textView13"
                 app:layout_constraintHorizontal_bias="0.388"
                 app:layout_constraintStart_toStartOf="@+id/textView13"
@@ -195,18 +195,18 @@
                 android:id="@+id/addItemButton"
                 android:layout_width="157dp"
                 android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/greenbuttonshape"
                 android:fontFamily="@font/yeonsung_regular"
                 android:text="Add Item"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textSize="20sp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/ingradient" />
+                app:layout_constraintTop_toBottomOf="@+id/ingredient" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

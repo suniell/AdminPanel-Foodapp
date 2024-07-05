@@ -6,7 +6,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".LoginActivity">
+    tools:context=".CreateUserActivity">
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/arrow_left"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/edittextshape"
+        android:drawableLeft="@drawable/usernew"
+        android:drawablePadding="15dp"
+        android:elevation="4dp"
+        android:hint="Name"
+        android:inputType="text"
+        android:outlineSpotShadowColor="@color/TextColor"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -34,9 +67,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:fontFamily="@font/lato_bold"
-        android:text="Liogin TO Your\n Admin Dashboard"
+        android:text="Create New User Admin"
         android:textAlignment="center"
         android:textColor="@color/TextColor"
         android:textSize="20sp"
@@ -55,113 +87,49 @@
         android:drawableLeft="@drawable/mail"
         android:drawablePadding="15dp"
         android:elevation="4dp"
-        android:hint="Email"
+        android:hint="Email or Phone Number"
         android:inputType="textEmailAddress"
         android:outlineSpotShadowColor="@color/TextColor"
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
         android:id="@+id/passwordd"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="32dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/edittextshape"
         android:drawableLeft="@drawable/lock"
         android:drawablePadding="15dp"
         android:elevation="4dp"
         android:hint="Password"
+        android:inputType="textPassword"
         android:outlineSpotShadowColor="@color/TextColor"
         android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailid" />
 
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/CreateUserButton"
+        android:layout_width="157dp"
+        android:layout_height="57dp"
         android:layout_marginTop="32dp"
+        android:background="@drawable/greenbuttonshape"
+        android:elevation="4dp"
         android:fontFamily="@font/yeonsung_regular"
-        android:text="Or\n Continue With"
-        android:textAlignment="center"
-        android:textColor="@color/TextColor"
+        android:outlineSpotShadowColor="@color/TextColor"
+        android:text="Create New User"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/passwordd"
         app:layout_constraintStart_toStartOf="@+id/passwordd"
         app:layout_constraintTop_toBottomOf="@+id/passwordd" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/googleButton"
-        android:layout_width="152dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edittextshape"
-        android:drawableLeft="@drawable/google"
-        android:elevation="4dp"
-        android:outlineSpotShadowColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:text="Google"
-        app:layout_constraintEnd_toStartOf="@+id/facebookButton"
-        app:layout_constraintHorizontal_bias="0.5"
-        android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/facebookButton"
-        android:layout_width="152dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/edittextshape"
-        android:drawableLeft="@drawable/facebook"
-        android:elevation="4dp"
-        android:outlineSpotShadowColor="@color/TextColor"
-        android:paddingLeft="15dp"
-        android:text="Facebook"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/googleButton"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/loginButton"
-        android:layout_width="152dp"
-        android:layout_height="57dp"
-        android:background="@drawable/greenbuttonshape"
-        android:layout_marginTop="18dp"
-        android:textColor="@color/white"
-        android:fontFamily="@font/yeonsung_regular"
-        android:elevation="4dp"
-        android:textSize="20sp"
-        android:outlineSpotShadowColor="@color/TextColor"
-        android:text="Login"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="@+id/facebookButton"
-        app:layout_constraintStart_toStartOf="@+id/googleButton"
-        app:layout_constraintTop_toBottomOf="@+id/facebookButton" />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't Have An Account?"
-        android:layout_marginTop="14dp"
-        android:textColor="@color/TextColor"
-        android:fontFamily="@font/lato_bold"
-        android:id="@+id/donthaveaccountbutton"
-        app:layout_constraintEnd_toEndOf="@+id/loginButton"
-        app:layout_constraintStart_toStartOf="@+id/loginButton"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 
     <TextView
@@ -176,6 +144,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

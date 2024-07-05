@@ -83,12 +83,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/attantion"
-                app:layout_constraintEnd_toEndOf="@+id/textView6"
-                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintEnd_toEndOf="@+id/pendingOrdertextView"
+                app:layout_constraintStart_toStartOf="@+id/pendingOrdertextView"
                 app:layout_constraintTop_toTopOf="@+id/guideline" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/pendingOrdertextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
@@ -109,9 +109,9 @@
                 android:text="30"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView6"
-                app:layout_constraintStart_toStartOf="@+id/textView6"
-                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+                app:layout_constraintEnd_toEndOf="@+id/pendingOrdertextView"
+                app:layout_constraintStart_toStartOf="@+id/pendingOrdertextView"
+                app:layout_constraintTop_toBottomOf="@+id/pendingOrdertextView" />
 
             <ImageView
                 android:id="@+id/imageView5"
@@ -284,10 +284,10 @@
         android:elevation="4dp"
         android:outlineSpotShadowColor="@color/TextColor"
         app:cardCornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="@+id/cardView6"
+        app:layout_constraintEnd_toEndOf="@+id/createUser"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
-        app:layout_constraintTop_toTopOf="@+id/cardView4">
+        app:layout_constraintStart_toEndOf="@+id/outForDeliveryCard"
+        app:layout_constraintTop_toTopOf="@+id/outForDeliveryCard">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -320,15 +320,15 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
+        android:id="@+id/outForDeliveryCard"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
         android:elevation="4dp"
         android:outlineSpotShadowColor="@color/TextColor"
         app:cardCornerRadius="15dp"
-        app:layout_constraintStart_toStartOf="@+id/cardView3"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
+        app:layout_constraintStart_toStartOf="@+id/profile"
+        app:layout_constraintTop_toBottomOf="@+id/profile">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -361,7 +361,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
+        android:id="@+id/createUser"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:elevation="4dp"
@@ -369,8 +369,8 @@
         app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="@+id/cardView5"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/cardView3"
-        app:layout_constraintTop_toTopOf="@+id/cardView3">
+        app:layout_constraintStart_toEndOf="@+id/profile"
+        app:layout_constraintTop_toTopOf="@+id/profile">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -405,7 +405,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
+        android:id="@+id/profile"
         android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="60dp"
