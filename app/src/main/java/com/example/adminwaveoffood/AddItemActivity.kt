@@ -66,13 +66,7 @@ class AddItemActivity : AppCompatActivity() {
         }
 
 
-        val pickImage =
-            registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
-                if (uri != null) {
-                    binding.selectedImage.setImageURI(uri)
-                    foodImageUri = uri
-                }
-            }
+
 
 
         binding.selectImage.setOnClickListener {
@@ -107,7 +101,7 @@ class AddItemActivity : AppCompatActivity() {
                         foodPrice = foodPrice,
                         foodDescription = foodDescription,
                         foodIngredient = foodIngredient,
-                        foodImage = downloadUrl.toString()
+                        foodImage = downloadUrl.toString(),
                     )
                     newItemKey?.let { key ->
                         menuRef.child(key).setValue(newItem).addOnCompleteListener {
@@ -134,4 +128,14 @@ class AddItemActivity : AppCompatActivity() {
 
 
     }
+
+    private val pickImage =
+        registerForActivityResult(ActivityResultContracts.GetContent()) { uri ->
+            if (uri != null) {
+                binding.selectedImage.setImageURI(uri)
+                foodImageUri = uri
+            }
+        }
+
+
 }

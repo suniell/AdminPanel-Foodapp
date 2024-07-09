@@ -1,11 +1,16 @@
 package com.example.adminwaveoffood.adapter
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.net.Uri
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 import com.example.adminwaveoffood.databinding.ActivityItemItemBinding
 import com.example.adminwaveoffood.model.AllMenu
 import com.google.firebase.database.DatabaseReference
@@ -45,6 +50,7 @@ class MenuitemAdapter(
                 foodNameTextView.text = menuItem.foodName
                 foodNamePrice.text = menuItem.foodPrice
                 Glide.with(context).load(uri).into(foodImageView)
+                Log.d("GlideImageLoader", "Loading image from: $uri")
                 quantityTextView.text = quantity.toString()
 
 

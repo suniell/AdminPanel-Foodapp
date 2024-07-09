@@ -74,6 +74,7 @@ class AllItemActivity : AppCompatActivity() {
                     }
                 }
                 setAdapter()
+
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -84,9 +85,10 @@ class AllItemActivity : AppCompatActivity() {
     }
     private fun setAdapter() {
         val adapter =
-            MenuitemAdapter(this, menuItems, databaseReference)
+            MenuitemAdapter(this@AllItemActivity, menuItems, databaseReference)
         binding.MenuRecyclerView.layoutManager = LinearLayoutManager(this)
         binding.MenuRecyclerView.adapter = adapter
     }
+    
 
 }

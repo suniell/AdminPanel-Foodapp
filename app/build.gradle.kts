@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+    id("kotlin-kapt")
 }
 
 android {
@@ -61,4 +62,8 @@ dependencies {
 
     //for glide
     implementation (libs.github.bumptech.glide)
+    annotationProcessor (libs.compiler)
+    //noinspection KaptUsageInsteadOfKsp
+    kapt(libs.compiler)
+
 }
